@@ -55,6 +55,7 @@
                         <input
                             class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             id="input1" type="text" placeholder="Ingrese la cantidad">
+                            
                     </div>
 
                     <div>
@@ -62,9 +63,11 @@
                             De
                         </label>
 
-                        <input
-                            class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                            id="input1" type="text" placeholder="Escoja la divisa">
+                        <select class="appearance-none block text-center w-28 bg-white text-gray-700 border border-gray-200 rounded-lg py-3 px-0 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="from_rigth">
+                            <option value="1">EUR</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                        </select>
                     </div>
                     <div class="relative top-8" >
                         <img src="../src/img/switch_32.png" alt="switch" class="hover:  cursor-pointer">
@@ -73,9 +76,11 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="input1">
                             A
                         </label>
-                        <input
-                            class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                            id="input1" type="text" placeholder="Escoja la divisa">
+                        <select class="appearance-none block text-center w-28 bg-white text-gray-700 border border-gray-200 rounded-lg py-3 px-0 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="to_left" >
+                            <option value="1">USA</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                        </select>
                     </div>
                 </div>
 
@@ -99,5 +104,5 @@
     </footer>
 
 </body>
-<script src="../src/js/script.js"></script>
+<script type="module" src="../src/js/script.js"></script>
 </html>
