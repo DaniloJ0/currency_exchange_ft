@@ -10,7 +10,8 @@ const fetchConversionRate = async (from, to, amount) => {
       redirect: 'follow',
       headers: myHeaders
     };
-  
+    //opcion 2
+    //https://api.apilayer.com/exchangerates_data/convert?to=
     const response = await fetch(`https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amount}`, requestOptions);
     const result = await response.json();
   

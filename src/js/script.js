@@ -32,12 +32,13 @@ form.addEventListener('submit', (e) => {
   let amount = amount_input.trim();
   if (amount.length === 0 || isNaN(Number(amount))) return alert('Por favor, ingresa una cantidad válida');
 
-  console.log(amount, from, to);
-
   connection.fetchConversionRate(from, to, amount)
-  .then(convert => result.textContent = `${amount} ${from} ≅ ${convert.result} ${to}`)
-  .catch(error => console.log('error', error));
-
+  .then(convert => {
+    result.textContent = `${amount} ${from} ≅ ${convert.result} ${to}`
+    let previousResult = JSON.parse(localStorage.getItem('results')) || [];
+    previousResult.push({amount, from, to, valor:convert.result, date: new Date().toISOString().slice(0, 10)});
+    localStorage.setItem('results', JSON.stringify(previousResult));
+  }).catch(error => console.log('error', error));
 });
 
 switch_value.addEventListener('click', (e) => {
