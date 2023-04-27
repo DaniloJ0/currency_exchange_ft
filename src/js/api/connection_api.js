@@ -11,8 +11,6 @@ const fetchConversionRate = async (link) => {
       redirect: 'follow',
       headers: myHeaders
     };
-    //opcion 2
-    //https://api.apilayer.com/exchangerates_data/convert?to=
     const response = await fetch(apiLink+link, requestOptions);
     const result = await response.json();
   

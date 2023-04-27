@@ -34,10 +34,12 @@ form.addEventListener('submit', (e) => {
 
   
   let endPoint = `convert?to=${to}&from=${from}&amount=${amount}`
+  result.textContent = "Cargando..."
   connection.fetchConversionRate(endPoint)
   .then(convert => {
     resultRate.textContent = `$ 1 ${from} ≅ ${convert.info.rate} ${to}`
     result.textContent = `${amount} ${from} ≅ ${convert.result} ${to}`
+    //save to local storage
     let previousResult = JSON.parse(localStorage.getItem('results')) || [];
     previousResult.push({amount, from, to, valor:convert.result, date: new Date().toISOString().slice(0, 10)});
     localStorage.setItem('results', JSON.stringify(previousResult));

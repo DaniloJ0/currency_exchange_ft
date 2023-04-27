@@ -6,6 +6,7 @@ const badge = ["CAD", "USD", "EUR", "GBP", "JPY", "AUD"]
 const inputAdd = document.getElementById('inputAdd');
 const integrarBtn = document.getElementById('integrarBtn');
 const allSimbolos = Object.keys(simbolos);
+
 inputAdd.style.display = 'none';
 
 allSimbolos.forEach((badge) => {
@@ -45,6 +46,7 @@ typeBadge.addEventListener('change', (e) => {
     showCurrenciesTable(newMoney);
 })
 
+//delete table content
 const deleteTable = () => {
     const table = document.querySelector('table');
     table.querySelectorAll('tbody tr').forEach(row => row.remove());
@@ -53,6 +55,7 @@ const deleteTable = () => {
 const showCurrenciesTable = (money) =>{
     let concatSymbs = badge.join("%2C");
     let endPoint = `latest?symbols=${concatSymbs}&base=${money}`
+    
     connection.fetchConversionRate(endPoint)
     .then(convert => {
         badge.forEach((val) => {
@@ -62,7 +65,6 @@ const showCurrenciesTable = (money) =>{
 }
 
 showCurrenciesTable('USD');
-
 
 function createRow(_name, _symbol, _rate){
 
