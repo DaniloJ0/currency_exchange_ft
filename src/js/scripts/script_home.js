@@ -1,5 +1,5 @@
-import connection from "./api/connection_api.js";
-import simbolos from "./symbols.js";
+import connection from "../api/connection_api.js";
+import simbolos from "../api/symbols.js";
 
 const form = document.getElementById("form_convert");
 let result = document.getElementById("result");

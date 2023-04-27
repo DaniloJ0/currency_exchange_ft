@@ -4,6 +4,7 @@ const data = JSON.parse(localStorage.getItem('results'));
 deleteBtn.addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.removeItem('results');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     location.reload();
 });
 

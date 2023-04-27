@@ -1,5 +1,5 @@
-import connection from "./api/connection_api.js";
-import simbolos from "./symbols.js";
+import connection from "../api/connection_api.js";
+import simbolos from "../api/symbols.js";
 const typeBadge = document.getElementById('typeBadge');
 const addBtn = document.getElementById('addBtn');
 const badge = ["CAD", "USD", "EUR", "GBP", "JPY", "AUD"]
@@ -64,7 +64,7 @@ const showCurrenciesTable = (money) =>{
     }).catch(error => console.log('error', error));
 }
 
-showCurrenciesTable('USD');
+// showCurrenciesTable('USD');
 
 function createRow(_name, _symbol, _rate){
 
