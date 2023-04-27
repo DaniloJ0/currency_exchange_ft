@@ -1,7 +1,8 @@
-import data from "../../key.js"
+import data from "../../../key.js"
 const apiKey = data.API_KEY;
+const apiLink = data.LINK_API;
 
-const fetchConversionRate = async (from, to, amount) => {
+const fetchConversionRate = async (link) => {
     const myHeaders = new Headers();
     myHeaders.append("apikey", apiKey);
   
@@ -12,7 +13,7 @@ const fetchConversionRate = async (from, to, amount) => {
     };
     //opcion 2
     //https://api.apilayer.com/exchangerates_data/convert?to=
-    const response = await fetch(`https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amount}`, requestOptions);
+    const response = await fetch(apiLink+link, requestOptions);
     const result = await response.json();
   
     return result;

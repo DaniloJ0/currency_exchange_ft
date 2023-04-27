@@ -18,9 +18,6 @@
                     <img src="../src/img/dolar_64.png" class="h-8 mr-3" alt="Flowbite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CashIn</span>
                 </a>
-                <div class="flex items-center">
-                    <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
-                </div>
             </div>
         </nav>
     </header>
@@ -44,22 +41,23 @@
         </div>
     </nav>
     <h1 class="self-center font-semibold whitespace-nowrap text-center text-lg my-5">Historicos</h1>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table id="table_history" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                    <th scope="col" class="px-6 py-3">
-                        Cantidad
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Moneda origen
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Moneda destino
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Valor
-                    </th>
+    <section class="min-h-screen">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table id="table_history" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Cantidad
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Moneda origen
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Moneda destino
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Valor
+                        </th>
                     <th scope="col" class="px-6 py-3">
                         Fecha
                     </th>
@@ -70,6 +68,13 @@
         </table>
         <button id="deleteBtn" type="button" class="mt-2 ml-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Eliminar todo</button>
     </div>
+</section>
+<footer class="bg-white shadow dark:bg-gray-800 ">
+    <div class="w-full mx-auto max-w-screen-xl p-4 text-center">
+        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 All Rights Reserved.
+        </span>
+    </div>
+</footer>
 </body>
 <script type="module" src="../src/js/script_hsty.js"></script>
 </html>
