@@ -55,16 +55,19 @@ const deleteTable = () => {
 const showCurrenciesTable = (money) =>{
     let concatSymbs = badge.join("%2C");
     let endPoint = `latest?symbols=${concatSymbs}&base=${money}`
-    
+    const loadText = document.getElementById('loadingText');
+    loadText.textContent = 'Cargando...';
     connection.fetchConversionRate(endPoint)
     .then(convert => {
         badge.forEach((val) => {
             createRow(simbolos[val], val, convert.rates[val]);
+            loadText.style.display = 'none';
          });
     }).catch(error => console.log('error', error));
 }
 
-// showCurrenciesTable('USD');
+showCurrenciesTable('USD');
+
 
 function createRow(_name, _symbol, _rate){
 

@@ -1,8 +1,20 @@
 const tableBody = document.getElementById('table_body');
 const data = JSON.parse(localStorage.getItem('results'));
 
+
+function isEmptyTable() {
+    if(localStorage.getItem('results') === null) {
+        document.getElementById('deleteBtn').textContent = 'No hay registros';
+    }else{
+        document.getElementById('deleteBtn').textContent = 'Eliminar todo';
+    }
+}
+
+isEmptyTable();
+
 deleteBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    if(localStorage.getItem('results') === null) return;
     localStorage.removeItem('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     location.reload();
